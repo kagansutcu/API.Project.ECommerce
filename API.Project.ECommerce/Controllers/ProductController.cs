@@ -20,7 +20,7 @@ namespace API.Project.ECommerce.Controllers
         [HttpGet]
         public List<ProductVM> GetAllProducts()
         {
-            return pr.Select(x => new ProductVM
+            List<ProductVM> urunler = pr.Select(x => new ProductVM
             {
                 ID = x.ID,
                 ProduuctName = x.ProduuctName,
@@ -28,6 +28,7 @@ namespace API.Project.ECommerce.Controllers
                 Category = x.Category,
                 CategoryID = x.CategoryID.Value
             }) as List<ProductVM>;
+            return urunler;
             
            
             
