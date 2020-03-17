@@ -1,5 +1,8 @@
 ﻿using API.Project.ECommerce.ViewModels;
-using BLL.DesignPatterns.RepositoryPattern.ConcRep;
+
+using BLL.DesignPatterns.SingeltonPattern;
+using DAL.Context;
+using Model.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,27 +14,29 @@ namespace API.Project.ECommerce.Controllers
 {
     public class ProductController : ApiController
     {
-        ProductRep pr;
+        MyContext db;
+      
         public ProductController()
         {
-            pr = new ProductRep();
+            db = DBTool.DBInstance;
         }
+     
 
         [HttpGet]
         public List<ProductVM> GetAllProducts()
         {
-            List<ProductVM> urunler = pr.Select(x => new ProductVM
+
+           return db.Products.Select(x => new ProductVM()
             {
                 ID = x.ID,
                 ProduuctName = x.ProduuctName,
                 UnitPrice = x.UnitPrice,
-                Category = x.Category,
-                CategoryID = x.CategoryID.Value
-            }) as List<ProductVM>;
-            return urunler;
+                CategoryName=x.Category.CategoryName,
+                
+            }).ToList();
             
-           
-            
+
+
         }
     }
 }

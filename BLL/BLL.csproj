@@ -52,10 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="DesignPatterns\RepositoryPattern\BaseRep\BaseRepository.cs" />
-    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\CategoryRep.cs" />
-    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\ProductRep.cs" />
-    <Compile Include="DesignPatterns\RepositoryPattern\IRep\IRepository.cs" />
     <Compile Include="DesignPatterns\SingeltonPattern\DBTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

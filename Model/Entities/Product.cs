@@ -13,7 +13,7 @@ namespace Model.Entities
         public int UnitStock { get; set; }
         public int? CategoryID { get; set; }
         //Relational properties begin
-        public virtual Category Category { get; set; }
+       public virtual Category Category { get; set; }
 
     }
 }
