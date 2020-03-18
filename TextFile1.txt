@@ -1,0 +1,17 @@
+                             API ÇALIÞTIRMA YÖNERGESÝ
+
+https://github.com/kagansutcu/API.Project.ECommerce.git linkinde bulunan Api projesini klonlayýp çalýþtýrdýktan sonra gelen localhost adresini kopyalayýn, adresin sonuna /api/Product/GetAllProducts uzantýsýný ekleyerek GET yöntemiyle Api’yi çaðýrýn. 
+
+Eriþebileceðiniz modeller ve özellikleri;
+
+Product nesnesi;
+
+string tipinde ProductName
+decimal tipinde UnitPrice
+string tipinde CategoryName     özelliklerini içerir.
+
+PROJE ÇALIÞTIRIRKEN OLUÞABÝLECEK HATALAR
+
+Çalýþtýrdýktan sonra eðer IIS üzerinde 
+“'C:\Users\user\Source\Repos\API.Project.ECommerce5\API.Project.ECommerce\bin\roslyn\csc.exe' yolunun bir parçasý bulunamadý.”
+þeklinde bir hata görürseniz, solution explorer’da projenin api katmanýna sað týklayýp Manage Nuget Packages penceresini açtýktan sonra Installed sekmesinde yüklü olan Microsoft.CodeDom.Providers.DotNetCompilerPlatform isimli mor simgeli package’i uninstall edin. Sonra browse sekmesine geçip tekrar ayný projeyi bulun ve install edin. Sorun çözülecektir.
