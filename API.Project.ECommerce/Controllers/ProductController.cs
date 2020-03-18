@@ -27,7 +27,7 @@ namespace API.Project.ECommerce.Controllers
 
            return db.Products.Select(x => new ProductVM()
             {
-                ID = x.ID,
+                
                 ProductName = x.ProductName,
                 UnitPrice = x.UnitPrice,
                 CategoryName=x.Category.CategoryName,
