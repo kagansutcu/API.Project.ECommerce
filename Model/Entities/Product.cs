@@ -8,8 +8,8 @@ namespace Model.Entities
 {
     public class Product:BaseEntity
     {
-        public string ProduuctName { get; set; }
-        public string UnitPrice { get; set; }
+        public string ProductName { get; set; }
+        public decimal UnitPrice { get; set; }
         public int UnitStock { get; set; }
         public int? CategoryID { get; set; }
         //Relational properties begin

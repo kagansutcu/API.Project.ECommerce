@@ -1,5 +1,4 @@
 ﻿using API.Project.ECommerce.ViewModels;
-
 using BLL.DesignPatterns.SingeltonPattern;
 using DAL.Context;
 using Model.Entities;
@@ -29,7 +28,7 @@ namespace API.Project.ECommerce.Controllers
            return db.Products.Select(x => new ProductVM()
             {
                 ID = x.ID,
-                ProduuctName = x.ProduuctName,
+                ProductName = x.ProductName,
                 UnitPrice = x.UnitPrice,
                 CategoryName=x.Category.CategoryName,
                 

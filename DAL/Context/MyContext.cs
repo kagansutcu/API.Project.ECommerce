@@ -1,4 +1,5 @@
-﻿using MAP.Options;
+﻿using DAL.StrategyPattern;
+using MAP.Options;
 using Model.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace DAL.Context
     {
         public MyContext():base("MyConnection")
         {
+            Database.SetInitializer(new Init());
             //Init tetikleyicinin yazılacağı alan
             //Init Classını DAL/StrategyPattern 'e açılacak
         }
